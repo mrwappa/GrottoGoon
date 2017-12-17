@@ -13,6 +13,9 @@ hands = instance_create(x,y,obj_hands);
 x_speed = 0;
 y_speed = 0;
 
+dash_value = 0;
+dashing = false;
+
 jump_value = 0;
 movement_speed = 3;
 acceleration = 1;

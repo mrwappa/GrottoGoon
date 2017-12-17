@@ -391,6 +391,14 @@
             }
         },
         {
+            "Key": "b6bb2974-88a3-4a50-a493-4a4d6afb38ca",
+            "Value": {
+                "id": "05fd4b99-915d-4cdd-b82d-1b059e9533a6",
+                "resourcePath": "scripts\\player_movement\\player_movement.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "be447506-6b44-48ef-b075-d7d907553a88",
             "Value": {
                 "id": "83db9612-a5ae-41c1-8266-850fd6615fb5",
@@ -541,7 +549,8 @@
         "c2419dc0-d852-4365-ab39-8d2cae3fff2d",
         "a30f91b4-f7e0-4d72-90e7-81e38e16d612",
         "b181794e-a099-4c7a-9914-45fbed204433",
-        "c4b0a0c6-e38a-4e39-8d67-03cfbad84483"
+        "c4b0a0c6-e38a-4e39-8d67-03cfbad84483",
+        "b6bb2974-88a3-4a50-a493-4a4d6afb38ca"
     ],
     "tutorial": ""
 }
