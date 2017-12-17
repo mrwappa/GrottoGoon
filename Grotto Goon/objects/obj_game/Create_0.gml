@@ -15,4 +15,4 @@ globalvar k_crouch;
 
 room_speed = 9999;
 globalvar delta;
-delta = 1;
+delta = 60/1000000*delta_time;//1

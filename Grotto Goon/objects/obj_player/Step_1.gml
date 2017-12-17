@@ -39,20 +39,30 @@ if(entity_y_collision(y_speed,obj_solid))
 	sprite_index = spr_player_walk;
 	y_speed = 0;
 }
-
+if(k_crouch and grounded)
+{
+	movement_speed = 2;
+	sprite_index = spr_player_crouch;		
+}
+else
+{
+	movement_speed = 3;	
+}
 //move
 x+=x_speed*delta;
 y+=y_speed*delta;
 
 //facing direction of sprite
-if(left)
+facing_dir = point_direction(x,y,mouse_x,mouse_y);
+if(facing_dir > 90 and facing_dir < 270)
 {
-	image_xscale = 1;	
+	image_xscale = -1;
 }
-if(right)
+else
 {
-	image_xscale = -1;	
+	image_xscale = 1;
 }
+
 
 //animation speed
 image_speed = abs(true_xspeed)/2;

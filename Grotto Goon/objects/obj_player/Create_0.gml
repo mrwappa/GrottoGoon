@@ -7,6 +7,8 @@ image_yscale = image_xscale;
 image_speed = 0;
 depth = 1;
 
+hands = instance_create(x,y,obj_hands);
+
 //movement
 x_speed = 0;
 y_speed = 0;
