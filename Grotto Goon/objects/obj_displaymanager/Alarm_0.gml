@@ -1,0 +1,3 @@
+/// @descriptions
+window_center();
+
