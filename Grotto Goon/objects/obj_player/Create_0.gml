@@ -16,6 +16,10 @@ hands = instance_create(x,y,obj_hands);
 //movement
 x_speed = 0;
 y_speed = 0;
+true_xspeed = 0;
+true_yspeed = 0;
+movement_add = 0;
+movement_sub = 0;
 
 dash_value = 0;
 dashing = false;
@@ -23,10 +27,10 @@ dashing = false;
 jump_value = 0;
 movement_speed = 3;
 acceleration = 1;
-restitution = 0.5;
-
-true_xspeed = 0;
-true_yspeed = 0;
+restitution = 0.4;
 
 p_gravity = 2;
 grounded = false;
+
+//alarm/counter stuff
+dash_counter = -1;

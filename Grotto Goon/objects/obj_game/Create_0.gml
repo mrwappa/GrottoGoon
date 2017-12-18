@@ -6,6 +6,9 @@ TOGGLE_PAUSE = 0;
 paused_ = false;
 pause_sprite_ = noone;
 
+globalvar SlowMo;
+SlowMo = 1;
+
 globalvar k_left;
 globalvar k_right;
 globalvar k_jump;

@@ -1,5 +1,6 @@
 var h_mov = k_right - k_left;
 
+//jump
 if(k_jump and grounded)
 {
 	jump_value = -9;
@@ -8,31 +9,35 @@ if(k_jump and grounded)
 
 if(hold_k_jump)
 {
-	jump_value = lerp(jump_value,0,power(0.07,delta));
+	jump_value = lerp(jump_value,0,power(0.072 ,delta));
 }
 else
 {
-	jump_value = lerp(jump_value,0,power(0.1,delta));
+	jump_value = lerp(jump_value,0,power(0.15,delta));
 }
 p_gravity += 0.07*delta;
 
-
-if(k_dash and !dashing)
+//dash
+if(k_dash and !dashing and x_speed != 0)
 {
 	dashing = true;
-	alarm[0] = 80/delta;
-	dash_value = 6;
+	dash_counter = 60;
+	dash_value = 9;
 }
+
+player_dash_counter();
+
 dash_value = lerp(dash_value,0,0.1*delta);
 var dash_power = dash_value *h_mov;
 
 //acceleration
-var movement_add = h_mov * acceleration * delta;
+movement_add = h_mov * acceleration * delta;
+
 //restitution
-var movement_sub = min(restitution*delta,abs(x_speed)) * sign(x_speed) * (h_mov == 0);
+movement_sub = min(restitution*delta,abs(x_speed)) * sign(x_speed) * (h_mov == 0);
 //apply speed
 x_speed = clamp(x_speed + movement_add - movement_sub, -movement_speed,movement_speed)+dash_power;
-y_speed = p_gravity + jump_value ;
+y_speed = p_gravity + jump_value;
 
 //collision
 if(entity_x_collision(x_speed,obj_solid))
@@ -80,8 +85,11 @@ if(img_speed == 0)
 }
 if(!grounded)
 {
-	img_speed = 0;	
+	img_index = 0;
+	img_speed = 0;
 }
+
+//coordinate maths
 true_xspeed = (x -xprevious)/delta;
 true_yspeed = (y -yprevious)/delta;
 
