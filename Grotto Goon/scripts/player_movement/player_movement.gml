@@ -9,11 +9,11 @@ if(k_jump and grounded)
 
 if(hold_k_jump)
 {
-	jump_value = lerp(jump_value,0,0.05*delta + fps_real/10000000);
+	jump_value = lerp(jump_value,0,0.05*delta + fps_real/100000000);
 }
 else
 {
-	jump_value = lerp(jump_value,0,0.14*delta + fps_real/10000000);
+	jump_value = lerp(jump_value,0,0.14*delta + fps_real/100000000);
 }
 p_gravity += 0.07*delta;
 
