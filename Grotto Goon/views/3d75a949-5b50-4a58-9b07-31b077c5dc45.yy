@@ -6,7 +6,8 @@
     "children": [
         "1a41fb94-4bbf-4438-838d-92d40e0977b9",
         "21e63a00-106f-4a0e-9a64-c301bd972f82",
-        "c2419dc0-d852-4365-ab39-8d2cae3fff2d"
+        "c2419dc0-d852-4365-ab39-8d2cae3fff2d",
+        "d79482e3-795f-4d8e-990a-2a48fd3f66fd"
     ],
     "filterType": "GMScript",
     "folderName": "Game\/Software",

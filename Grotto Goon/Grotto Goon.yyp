@@ -487,6 +487,14 @@
             }
         },
         {
+            "Key": "d79482e3-795f-4d8e-990a-2a48fd3f66fd",
+            "Value": {
+                "id": "def6c93d-8015-4af5-8879-bfaee9c086bb",
+                "resourcePath": "scripts\\damp\\damp.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d8fde48a-b0f4-40ba-85f5-70b71ee5f8ff",
             "Value": {
                 "id": "74e37d20-bdef-449d-bd3b-db7d1120cd7b",
@@ -571,6 +579,7 @@
         "1a41fb94-4bbf-4438-838d-92d40e0977b9",
         "21e63a00-106f-4a0e-9a64-c301bd972f82",
         "c2419dc0-d852-4365-ab39-8d2cae3fff2d",
+        "d79482e3-795f-4d8e-990a-2a48fd3f66fd",
         "a30f91b4-f7e0-4d72-90e7-81e38e16d612",
         "b181794e-a099-4c7a-9914-45fbed204433",
         "c4b0a0c6-e38a-4e39-8d67-03cfbad84483",
