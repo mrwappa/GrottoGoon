@@ -9,13 +9,15 @@ if(k_jump and grounded)
 
 if(hold_k_jump)
 {
+	//lerp gets totally different results even if you apply: * delta.
+	//this is a temporary workaround to make sure it returns the same value on all machines
 	jump_value = lerp(jump_value,0,0.05*delta + fps_real/100000000);
 }
 else
 {
 	jump_value = lerp(jump_value,0,0.14*delta + fps_real/100000000);
 }
-p_gravity += 0.07*delta;
+p_gravity += 0.08*delta;
 
 //dash
 if(k_dash and !dashing and x_speed != 0)
@@ -27,7 +29,7 @@ if(k_dash and !dashing and x_speed != 0)
 
 player_dash_counter();
 
-dash_value = lerp(dash_value,0,0.1*delta);
+dash_value = lerp(dash_value,0,0.1*delta+ fps_real/100000000);
 var dash_power = dash_value *h_mov;
 
 //acceleration

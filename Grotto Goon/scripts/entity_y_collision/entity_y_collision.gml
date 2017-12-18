@@ -28,7 +28,7 @@
 		if(bricky.y > y)
 		{
 			grounded = true;
-			p_gravity = 2;
+			p_gravity = 2.3;
 		}
 		return true;
 	}

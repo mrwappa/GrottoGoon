@@ -29,7 +29,7 @@ movement_speed = 3;
 acceleration = 1;
 restitution = 0.4;
 
-p_gravity = 2;
+p_gravity = 2.3;
 grounded = false;
 
 //alarm/counter stuff
