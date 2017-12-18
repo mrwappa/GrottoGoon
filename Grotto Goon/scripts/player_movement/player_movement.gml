@@ -9,11 +9,11 @@ if(k_jump and grounded)
 
 if(hold_k_jump)
 {
-	jump_value = lerp(jump_value,0,power(0.072 ,delta));
+	jump_value = lerp(jump_value,0,0.072*delta);
 }
 else
 {
-	jump_value = lerp(jump_value,0,power(0.15,delta));
+	jump_value = lerp(jump_value,0,0.16*delta);
 }
 p_gravity += 0.07*delta;
 
@@ -22,7 +22,7 @@ if(k_dash and !dashing and x_speed != 0)
 {
 	dashing = true;
 	dash_counter = 60;
-	dash_value = 9;
+	dash_value = 8;
 }
 
 player_dash_counter();
