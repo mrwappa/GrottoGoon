@@ -3,7 +3,7 @@ var h_mov = k_right - k_left;
 //jump
 if(k_jump and grounded)
 {
-	jump_value = -9;
+	jump_value = -9.3;
 	sprite_index = spr_player_jump;
 }
 
