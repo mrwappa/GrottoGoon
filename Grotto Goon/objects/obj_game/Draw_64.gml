@@ -28,7 +28,7 @@ draw_text(5,5,display_write_specs(display.screen)+"\n"+
 draw_set_halign(fa_right);
 draw_set_valign(fa_bottom);
 draw_text(display_get_gui_width()-5, display_get_gui_height() -30, "FPS_REAL = " + string(floor(fps_real)));
-draw_text(display_get_gui_width()-5, display_get_gui_height() -50, "FPS = " + string(floor(fps_real)));
+draw_text(display_get_gui_width()-5, display_get_gui_height() -50, "FPS = " + string(floor(fps)));
 draw_text(display_get_gui_width()-5, display_get_gui_height() -90, room_speed);
 
 draw_text(display_get_gui_width()-5, display_get_gui_height() -5, "Bottom Right");

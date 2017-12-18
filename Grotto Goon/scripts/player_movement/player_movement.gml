@@ -8,11 +8,11 @@ if(k_jump and grounded)
 
 if(hold_k_jump)
 {
-	jump_value = lerp(jump_value,0,0.0010);
+	jump_value = lerp(jump_value,0,power(0.07,delta));
 }
 else
 {
-	jump_value = lerp(jump_value,0,0.0018);	
+	jump_value = lerp(jump_value,0,power(0.1,delta));
 }
 p_gravity += 0.07*delta;
 
@@ -72,14 +72,15 @@ else
 
 
 //animation speed
-image_speed = abs(true_xspeed)/2;
-if(image_speed == 0)
+img_speed = abs(true_xspeed)/10;
+
+if(img_speed == 0)
 {
-	image_index = 0;	
+	img_index = 0;	
 }
 if(!grounded)
 {
-	image_speed = 0;	
+	img_speed = 0;	
 }
 true_xspeed = (x -xprevious)/delta;
 true_yspeed = (y -yprevious)/delta;

@@ -15,6 +15,6 @@ globalvar k_crouch;
 globalvar k_dash;
 globalvar k_attack;
 
-room_speed = 9999;
+
 globalvar delta;
-delta = 60/1000000*delta_time;//1
+delta = 1;//1
