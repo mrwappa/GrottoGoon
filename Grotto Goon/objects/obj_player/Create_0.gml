@@ -32,6 +32,8 @@ restitution = 0.4;
 p_gravity = 2.3;
 grounded = false;
 
+x_collision = false;
+
 //alarm/counter stuff
 dash_counter = -1;
 shadow_counter = 0;

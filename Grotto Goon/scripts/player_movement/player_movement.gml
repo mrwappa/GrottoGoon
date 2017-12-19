@@ -22,6 +22,7 @@ else
 }
 p_gravity += 0.14*delta;
 
+
 //dash
 if(k_dash and !dashing and x_speed != 0)
 {
@@ -45,9 +46,23 @@ movement_sub = min(restitution*delta,abs(x_speed)) * sign(x_speed) * (h_mov == 0
 x_speed = clamp(x_speed + movement_add - movement_sub, -movement_speed,movement_speed)+dash_power;
 y_speed = p_gravity + jump_value;
 
+//wall slide
+if(!grounded and x_collision and true_yspeed > 0)
+{
+	y_speed = 1;
+	p_gravity = 2.3;
+	//implement wall jump
+	if(k_jump)
+	{
+		
+	}
+}
+
 //collision
+x_collision = false;
 if(entity_x_collision(x_speed,obj_solid))
 {
+	x_collision = true;
 	x_speed = 0;
 	image_speed = 0;
 	image_index = 0;
@@ -57,6 +72,7 @@ if(entity_y_collision(y_speed,obj_solid))
 	sprite_index = spr_player_walk;
 	y_speed = 0;
 }
+
 
 //crouch
 if(k_crouch and grounded)
