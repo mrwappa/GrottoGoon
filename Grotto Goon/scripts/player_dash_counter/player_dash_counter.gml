@@ -15,7 +15,7 @@ if(dashing)
 		shadow_counter -= 1*delta;
 		if(shadow_counter <= 0)
 		{
-			shadow_counter = 0.1*60;
+			shadow_counter = 0.12*60;
 			instance_create(x,y,obj_shadow_dash);
 		}	
 	}

@@ -95,6 +95,7 @@ if(instance_exists(obj_weapon))
 		
 			with(value)
 			{
+				alarm[0] = 1;
 				current_state = state_idle;
 				x = other.x;
 				y = other.y;

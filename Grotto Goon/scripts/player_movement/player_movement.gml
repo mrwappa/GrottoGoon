@@ -3,7 +3,7 @@ var h_mov = k_right - k_left;
 //jump
 if(k_jump and grounded)
 {
-	jump_value = -9.3;
+	jump_value = -10.3;
 	sprite_index = spr_player_jump;
 }
 
@@ -12,13 +12,15 @@ if(hold_k_jump)
 	//lerp gets totally different results even if you apply: * delta.
 	//this is a temporary workaround to make sure it returns somewhat same value on all machines
 	//can try the power(procent,delta) workaround as well
-	jump_value = lerp(jump_value,0,0.05*delta + fps_real/100000000);
+	jump_value = lerp(jump_value,0,0.049*delta + fps_real/100000000);
+	//jump_value = damp(jump_value,0,0.049/1000);
 }
 else
 {
-	jump_value = lerp(jump_value,0,0.14*delta + fps_real/100000000);
+	jump_value = lerp(jump_value,0,0.15*delta + fps_real/100000000);
+	//jump_value = damp(jump_value,0,0.15/1000);
 }
-p_gravity += 0.08*delta;
+p_gravity += 0.14*delta;
 
 //dash
 if(k_dash and !dashing and x_speed != 0)
@@ -26,7 +28,7 @@ if(k_dash and !dashing and x_speed != 0)
 	dashing = true;
 	dash_counter = 60;
 	dash_value = 8;
-	shadow_counter = 0.1*60;
+	shadow_counter = 0.12*60;
 }
 
 player_dash_counter();
@@ -55,6 +57,8 @@ if(entity_y_collision(y_speed,obj_solid))
 	sprite_index = spr_player_walk;
 	y_speed = 0;
 }
+
+//crouch
 if(k_crouch and grounded)
 {
 	movement_speed = 2;
@@ -64,11 +68,12 @@ else
 {
 	movement_speed = 3;	
 }
+
 //move
 x+=x_speed*delta;
 y+=y_speed*delta;
 
-//facing direction of sprite
+//facing direction of the sprite
 facing_dir = point_direction(x,y,mouse_x,mouse_y);
 if(facing_dir > 90 and facing_dir < 270)
 {
@@ -78,7 +83,6 @@ else
 {
 	image_xscale = 1;
 }
-
 
 //animation speed
 img_speed = abs(true_xspeed)/10;

@@ -1,4 +1,5 @@
 /// @description
+alarm[0] = 1;
 target = obj_player;
 
 //Appearance
