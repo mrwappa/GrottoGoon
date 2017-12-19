@@ -34,3 +34,10 @@ grounded = false;
 
 //alarm/counter stuff
 dash_counter = -1;
+shadow_counter = 0;
+
+//list and value
+Weapons = ds_list_create();
+Weapon = noone;
+value = noone;
+current_weapon = 0;

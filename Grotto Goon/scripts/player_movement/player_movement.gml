@@ -10,7 +10,8 @@ if(k_jump and grounded)
 if(hold_k_jump)
 {
 	//lerp gets totally different results even if you apply: * delta.
-	//this is a temporary workaround to make sure it returns the same value on all machines
+	//this is a temporary workaround to make sure it returns somewhat same value on all machines
+	//can try the power(procent,delta) workaround as well
 	jump_value = lerp(jump_value,0,0.05*delta + fps_real/100000000);
 }
 else
@@ -25,6 +26,7 @@ if(k_dash and !dashing and x_speed != 0)
 	dashing = true;
 	dash_counter = 60;
 	dash_value = 8;
+	shadow_counter = 0.1*60;
 }
 
 player_dash_counter();
