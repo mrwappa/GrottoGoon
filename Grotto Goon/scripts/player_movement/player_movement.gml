@@ -53,7 +53,7 @@ if(!grounded and x_collision and y_speed > 0)
 	p_gravity = 2.3;
 	
 	//dust effect
-	dust_counter -= 1*delta;
+	dust_counter -= 1*delta_time/1000000;
 	if(dust_counter <= 0)
 	{
 		if(k_left)
@@ -64,7 +64,7 @@ if(!grounded and x_collision and y_speed > 0)
 		{
 			instance_create(x + sprite_width/4 * sign(image_xscale),y + irandom_range(-2,2),obj_dust);
 		}
-		dust_counter = 0.3;
+		dust_counter = 0.009;
 	}
 	
 }
