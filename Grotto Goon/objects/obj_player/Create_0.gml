@@ -25,7 +25,7 @@ dash_value = 0;
 dashing = false;
 
 jump_value = 0;
-movement_speed = 3;
+movement_speed = 2.8;
 acceleration = 1;
 restitution = 0.4;
 
@@ -37,6 +37,8 @@ x_collision = false;
 //alarm/counter stuff
 dash_counter = -1;
 shadow_counter = 0;
+
+dust_counter = 0;
 
 //list and value
 Weapons = ds_list_create();

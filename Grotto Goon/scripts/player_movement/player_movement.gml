@@ -3,7 +3,7 @@ var h_mov = k_right - k_left;
 //jump
 if(k_jump and grounded)
 {
-	jump_value = -10.3;
+	jump_value = -8.5;
 	sprite_index = spr_player_jump;
 }
 
@@ -12,12 +12,12 @@ if(hold_k_jump)
 	//lerp gets totally different results even if you apply: * delta.
 	//this is a temporary workaround to make sure it returns somewhat same value on all machines
 	//can try the power(procent,delta) workaround as well
-	jump_value = lerp(jump_value,0,0.049*delta + fps_real/100000000);
+	jump_value = lerp(jump_value,0,0.021*delta + fps_real/100000000);
 	//jump_value = damp(jump_value,0,0.049/1000);
 }
 else
 {
-	jump_value = lerp(jump_value,0,0.15*delta + fps_real/100000000);
+	jump_value = lerp(jump_value,0,0.1*delta + fps_real/100000000);
 	//jump_value = damp(jump_value,0,0.15/1000);
 }
 p_gravity += 0.14*delta;
@@ -47,15 +47,26 @@ x_speed = clamp(x_speed + movement_add - movement_sub, -movement_speed,movement_
 y_speed = p_gravity + jump_value;
 
 //wall slide
-if(!grounded and x_collision and true_yspeed > 0)
+if(!grounded and x_collision and y_speed > 0)
 {
-	y_speed = 1;
-	p_gravity = 3.5;
-	//implement wall jump
-	if(k_jump)
+	jump_value = -1.3;
+	p_gravity = 2.3;
+	
+	//dust effect
+	dust_counter -= 1*delta;
+	if(dust_counter <= 0)
 	{
-		
+		if(k_left)
+		{
+			instance_create(x - sprite_width/4 * sign(image_xscale),y + irandom_range(-2,2),obj_dust);	
+		}
+		if(k_right)
+		{
+			instance_create(x + sprite_width/4 * sign(image_xscale),y + irandom_range(-2,2),obj_dust);
+		}
+		dust_counter = 0.3;
 	}
+	
 }
 
 //collision
@@ -66,6 +77,14 @@ if(entity_x_collision(x_speed,obj_solid))
 	x_speed = 0;
 	image_speed = 0;
 	image_index = 0;
+	
+	//wall jump
+	if(k_jump and !grounded)
+	{
+		jump_value = -7.5;
+		sprite_index = spr_player_jump;
+		x_collision = false;
+	}
 }
 if(entity_y_collision(y_speed,obj_solid))
 {
@@ -81,7 +100,7 @@ if(k_crouch and grounded)
 }
 else
 {
-	movement_speed = 3;	
+	movement_speed = 2.8;	
 }
 
 //move

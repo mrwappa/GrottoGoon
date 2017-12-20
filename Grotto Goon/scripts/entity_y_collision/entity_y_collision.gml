@@ -25,14 +25,15 @@
 				y-=sign(p_difference);
 			}  
 		}
-		if(bricky.y > y)
+		if(bricky.y > y)//hitting a solid from below
 		{
 			grounded = true;
 			p_gravity = 2.3;
+			jump_value = 0;
 			y_speed = 0;
 			sprite_index = spr_player_walk;
 		}
-		else
+		else//hitting a solid from above
 		{
 			y_speed = 0;
 			p_gravity = 2.3;
