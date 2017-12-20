@@ -8,4 +8,31 @@ k_crouch = keyboard_check(ord("S"));
 k_dash = mouse_check_button_pressed(mb_right);
 k_attack = mouse_check_button_pressed(mb_left);
 
-delta = 60/1000000*delta_time;
+//delta = 60/1000000*delta_time;
+
+dtPrevious = dt;
+
+// Store previous internal delta time
+dtPrevious = dt;
+// Update internal delta time
+dt = delta_time/1000000;
+
+// Prevent delta time from exhibiting sporadic behaviour
+if (dt > 1/minFPS)
+{
+    if (dtRestored) 
+    { 
+        dt = 1/minFPS; 
+    } 
+    else 
+    { 
+        dt = dtPrevious;
+        dtRestored = true;
+    }
+}
+else
+{
+    dtRestored = false;
+}
+
+delta = dt*timeScale;

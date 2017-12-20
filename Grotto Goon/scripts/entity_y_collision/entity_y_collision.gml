@@ -28,7 +28,7 @@
 		if(bricky.y > y)//hitting a solid from below
 		{
 			grounded = true;
-			p_gravity = 2.3;
+			p_gravity = 20;
 			jump_value = 0;
 			y_speed = 0;
 			sprite_index = spr_player_walk;
@@ -36,7 +36,7 @@
 		else//hitting a solid from above
 		{
 			y_speed = 0;
-			p_gravity = 2.3;
+			p_gravity = 20;
 			jump_value = -2.3;
 		}
 		return true;
