@@ -12,12 +12,12 @@ if(hold_k_jump)
 	//lerp gets totally different results even if you apply: * delta.
 	//this is a temporary workaround to make sure it returns somewhat same value on all machines
 	//can try the power(procent,delta) workaround as well
-	jump_value = lerp(jump_value,0,0.021*delta + fps_real/100000000);
+	jump_value = lerp(jump_value,0,0.63*delta_time/1000000);
 	//jump_value = damp(jump_value,0,0.049/1000);
 }
 else
 {
-	jump_value = lerp(jump_value,0,0.1*delta + fps_real/100000000);
+	jump_value = lerp(jump_value,0,0.1*delta_time/1000000);
 	//jump_value = damp(jump_value,0,0.15/1000);
 }
 p_gravity += 0.14*delta;
