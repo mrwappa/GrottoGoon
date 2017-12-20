@@ -50,7 +50,7 @@ y_speed = p_gravity + jump_value;
 if(!grounded and x_collision and true_yspeed > 0)
 {
 	y_speed = 1;
-	p_gravity = 2.3;
+	p_gravity = 3.5;
 	//implement wall jump
 	if(k_jump)
 	{
@@ -69,8 +69,7 @@ if(entity_x_collision(x_speed,obj_solid))
 }
 if(entity_y_collision(y_speed,obj_solid))
 {
-	sprite_index = spr_player_walk;
-	y_speed = 0;
+	//
 }
 
 

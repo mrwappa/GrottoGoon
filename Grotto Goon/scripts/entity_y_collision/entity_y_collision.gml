@@ -29,6 +29,14 @@
 		{
 			grounded = true;
 			p_gravity = 2.3;
+			y_speed = 0;
+			sprite_index = spr_player_walk;
+		}
+		else
+		{
+			y_speed = 0;
+			p_gravity = 2.3;
+			jump_value = -2.3;
 		}
 		return true;
 	}
