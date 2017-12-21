@@ -8,3 +8,7 @@ x_speed = clamp(x_speed + movement_add - movement_sub, -movement_speed,movement_
 //y_speed = p_gravity + jump_value;
 
 x += x_speed * delta;
+
+//coordinate maths
+true_xspeed = (x -xprevious);
+true_yspeed = (y -yprevious);
