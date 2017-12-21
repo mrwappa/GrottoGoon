@@ -40,7 +40,7 @@ x_collision = false;
 dash_counter = -1;
 shadow_counter = 0;
 
-dust_counter = 0;
+dust_counter = 0.01;
 
 //list and value
 Weapons = ds_list_create();

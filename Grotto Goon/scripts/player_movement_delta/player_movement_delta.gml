@@ -30,29 +30,6 @@ movement_sub = min(restitution*delta,abs(x_speed)) * sign(x_speed) * (h_mov == 0
 x_speed = clamp(x_speed + movement_add - movement_sub, -movement_speed,movement_speed);
 y_speed = p_gravity + jump_value;
 
-//wall slide
-if(!grounded and x_collision and y_speed > 0)
-{
-	jump_value = -100;
-	p_gravity = 190;
-	
-	//dust effect
-	dust_counter -= delta;
-	if(dust_counter <= 0)
-	{
-		if(k_left)
-		{
-			instance_create(x - sprite_width/4 * sign(image_xscale),y + irandom_range(-2,2),obj_dust);	
-		}
-		if(k_right)
-		{
-			instance_create(x + sprite_width/7 * sign(image_xscale),y + irandom_range(-2,2),obj_dust);
-		}
-		dust_counter = 0.01;
-	}
-	
-}
-
 //collision
 x_collision = false;
 if(entity_x_collision(x_speed*delta,obj_solid))
