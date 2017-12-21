@@ -12,4 +12,4 @@ if(img_speed > 0)
 		}	
 	}
 }
-image_index = img_index;
+image_index = img_index; 

@@ -407,6 +407,14 @@
             }
         },
         {
+            "Key": "7c23aaa3-5aa0-4d92-b13a-5d4f90a97adf",
+            "Value": {
+                "id": "49d1d790-a806-4e88-a3a4-1e4d2c429131",
+                "resourcePath": "scripts\\player_movement_delta\\player_movement_delta.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7ce30468-bf2b-4254-bd27-2fabcae49dcb",
             "Value": {
                 "id": "82385d59-5573-48f3-8bb9-56ad9e2db4be",
@@ -841,6 +849,7 @@
         "89934c6c-ce2f-40cd-8cb4-517c1fc9733f",
         "509b7343-73ae-4dd7-bf34-e5047d6edc87",
         "7ce30468-bf2b-4254-bd27-2fabcae49dcb",
+        "7c23aaa3-5aa0-4d92-b13a-5d4f90a97adf",
         "4b032a6a-f828-4ff3-b6ab-188036bf3e47",
         "ebc9fdf3-3838-4e12-a2a2-218660a19166",
         "370f6ecf-2c49-4a0c-b05b-af9c5691d3df",

@@ -3,7 +3,7 @@ var h_mov = k_right - k_left;
 //jump
 if(k_jump and grounded)
 {
-	jump_value = -8.5;
+	jump_value = -30;
 	sprite_index = spr_player_jump;
 }
 
@@ -22,7 +22,7 @@ else
 	//jump_value = lerp(jump_value,0,0.1*delta_time/1000000);
 	//jump_value = damp(jump_value,0,0.15/1000);
 }
-p_gravity += 0.14*delta;
+p_gravity += 2*delta;
 
 
 //dash
