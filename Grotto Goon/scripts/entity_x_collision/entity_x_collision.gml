@@ -34,7 +34,7 @@
 			p_gravity = 190;
 	
 			//dust effect
-			dust_counter -= delta_time/timeScale;
+			dust_counter -= delta;
 			if(dust_counter <= 0)
 			{
 				//makes sure that the y position of dust is clamped to the current bricks dimensions
