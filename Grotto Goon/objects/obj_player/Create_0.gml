@@ -1,5 +1,7 @@
 /// @description
 
+
+
 //Appearance
 color = c_white;
 image_xscale = 1;
@@ -25,8 +27,8 @@ dash_value = 0;
 dashing = false;
 
 jump_value = 0;
-movement_speed = 200;
-acceleration = 10000;
+movement_speed = 145;
+acceleration = 5000;
 restitution = 2000;
 
 p_gravity = 2.3;
