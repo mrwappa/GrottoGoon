@@ -9,7 +9,8 @@
 				y+=sign(argument0);
 
 		}
-		if(y > bricky.y and instance_place(x,y,argument1))
+		
+		/*if(y > bricky.y and instance_place(x,y,argument1))
 		{
 			var p_difference = abs((y - sprite_height/2) - (bricky.y + bricky.sprite_height/2));
 			if(p_difference > 0)
@@ -24,11 +25,12 @@
 			{
 				y-=sign(p_difference);
 			}  
-		}
+		}*/
+		
 		if(bricky.y > y)//hitting a solid from below
 		{
 			grounded = true;
-			p_gravity = 40;
+			p_gravity = 190;
 			jump_value = 0;
 			y_speed = 0;
 			sprite_index = spr_player_walk;
@@ -36,8 +38,8 @@
 		else//hitting a solid from above
 		{
 			y_speed = 0;
-			p_gravity = 40;
-			jump_value = -2.3;
+			p_gravity = 190;
+			jump_value = -190;
 		}
 		return true;
 	}

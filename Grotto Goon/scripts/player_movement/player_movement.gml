@@ -3,7 +3,7 @@ var h_mov = k_right - k_left;
 //jump
 if(k_jump and grounded)
 {
-	jump_value = -30;
+	jump_value = -140;
 	sprite_index = spr_player_jump;
 }
 
@@ -12,15 +12,15 @@ if(hold_k_jump)
 	//lerp gets totally different results even if you apply: * delta.
 	//this is a temporary workaround to make sure it returns somewhat same value on all machines
 	//can try the power(procent,delta) workaround as well
-	jump_value = lerp(jump_value,0,0.021*delta + fps_real/100000000);
+	//jump_value = lerp(jump_value,0,0.021*delta + fps_real/100000000);
 	//jump_value = lerp(jump_value,0,0.63*delta_time/1000000);
-	//jump_value = damp(jump_value,0,0.049/1000);
+	jump_value = lerp(jump_value,0,delta/1);
 }
 else
 {
-	jump_value = lerp(jump_value,0,0.1*delta + fps_real/100000000);
+	//jump_value = lerp(jump_value,0,0.1*delta + fps_real/100000000);
 	//jump_value = lerp(jump_value,0,0.1*delta_time/1000000);
-	//jump_value = damp(jump_value,0,0.15/1000);
+	jump_value = lerp(jump_value,0,delta/1);
 }
 p_gravity += 2*delta;
 
@@ -73,7 +73,7 @@ if(!grounded and x_collision and y_speed > 0)
 
 //collision
 x_collision = false;
-if(entity_x_collision(x_speed,obj_solid))
+if(entity_x_collision(x_speed*delta,obj_solid))
 {
 	x_collision = true;
 	x_speed = 0;
@@ -88,7 +88,7 @@ if(entity_x_collision(x_speed,obj_solid))
 		x_collision = false;
 	}
 }
-if(entity_y_collision(y_speed,obj_solid))
+if(entity_y_collision(y_speed*delta,obj_solid))
 {
 	//
 }
@@ -97,12 +97,12 @@ if(entity_y_collision(y_speed,obj_solid))
 //crouch
 if(k_crouch and grounded)
 {
-	movement_speed = 2;
+	movement_speed = 120;
 	sprite_index = spr_player_crouch;		
 }
 else
 {
-	movement_speed = 2.8;	
+	movement_speed = 145;	
 }
 
 //move

@@ -27,11 +27,11 @@ dash_value = 0;
 dashing = false;
 
 jump_value = 0;
-movement_speed = 145;
-acceleration = 5000;
-restitution = 2000;
+movement_speed = 168;
+acceleration = 4000;
+restitution = 1700;
 
-p_gravity = 2.3;
+p_gravity = 180;
 grounded = false;
 
 x_collision = false;

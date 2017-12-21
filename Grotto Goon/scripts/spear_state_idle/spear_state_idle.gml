@@ -11,13 +11,13 @@ if(current_state == argument0)
 		 color = mergecolor;
 	}
 	
-	falling_speed += 1*delta;
-	var block = instance_place(x,y + falling_speed,obj_solid);
+	falling_speed += 200*delta;
+	var block = instance_place(x,y + falling_speed*delta,obj_solid);
 	if(block)
 	{
-		for(var i = 0; i < abs(falling_speed); i++)
+		for(var i = 0; i < abs(falling_speed*delta); i++)
 		{
-			if(place_meeting(x,y+sign(falling_speed),block)) then break;
+			if(place_meeting(x,y+sign(falling_speed*delta),block)) then break;
 				y+=sign(falling_speed)*delta;
 			
 		}

@@ -10,10 +10,10 @@ depth = -1;
 //Positioning
 extra_length_x = lengthdir_x(25,image_angle);
 extra_length_y = lengthdir_y(25,image_angle);
-falling_speed = 3;
+falling_speed = 200;
 
 //Attack
-lunge_speed = 7;
+lunge_speed = 340;
 lunge_max_length = 32;
 lunge_current_length = 0;
 lunging = true;
