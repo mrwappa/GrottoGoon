@@ -10,7 +10,7 @@
 
 		}
 		
-		/*if(y > bricky.y and instance_place(x,y,argument1))
+		if(y > bricky.y and instance_place(x,y,argument1))
 		{
 			var p_difference = abs((y - sprite_height/2) - (bricky.y + bricky.sprite_height/2));
 			if(p_difference > 0)
@@ -25,7 +25,7 @@
 			{
 				y-=sign(p_difference);
 			}  
-		}*/
+		}
 		
 		if(bricky.y > y)//hitting a solid from below
 		{

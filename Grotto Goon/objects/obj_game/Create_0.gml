@@ -6,6 +6,9 @@ TOGGLE_PAUSE = 0;
 paused_ = false;
 pause_sprite_ = noone;
 
+globalvar nmTest;
+nmTest = 0;
+
 //should remove this eventually
 globalvar SlowMo;
 SlowMo = 1;

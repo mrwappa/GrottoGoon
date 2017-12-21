@@ -1,4 +1,4 @@
-//if(x != xprevious)
+ //if(x != xprevious)
 {
 	var brickx = instance_place(x + argument0,y,argument1);
 	if(brickx)

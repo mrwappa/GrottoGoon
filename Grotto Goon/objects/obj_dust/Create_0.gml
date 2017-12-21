@@ -7,3 +7,5 @@ image_yscale = image_xscale;
 turn = choose(true,false);
 
 image_alpha = 0.4;
+
+nmTest++;
