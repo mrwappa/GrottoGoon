@@ -27,7 +27,7 @@ dash_value = 0;
 dashing = false;
 
 jump_value = 0;
-movement_speed = 168;
+movement_speed = 158;
 acceleration = 4000;
 restitution = 1700;
 

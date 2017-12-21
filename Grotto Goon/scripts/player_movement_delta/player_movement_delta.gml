@@ -17,7 +17,7 @@ if(hold_k_jump)
 else
 {
 
-	jump_value = damp(jump_value,0,1-0.98);
+	jump_value = damp(jump_value,0,1-0.995);
 }
 p_gravity += 380*delta;
 
@@ -42,7 +42,7 @@ if(entity_x_collision(x_speed*delta,obj_solid))
 	//wall jump
 	if(k_jump and !grounded)
 	{
-		jump_value = -500;
+		jump_value = -450;
 		sprite_index = spr_player_jump;
 		x_collision = false;
 	}
@@ -56,12 +56,12 @@ if(entity_y_collision(y_speed*delta,obj_solid))
 //crouch
 if(k_crouch and grounded)
 {
-	movement_speed = 130;
+	movement_speed = 80;
 	sprite_index = spr_player_crouch;		
 }
 else
 {
-	movement_speed = 168;	
+	movement_speed = 154;	
 }
 
 //move

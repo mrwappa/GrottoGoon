@@ -30,11 +30,11 @@
 		//wall slide
 		if(!grounded and y_speed > 0)
 		{
-			jump_value = -100;
+			jump_value = -150;
 			p_gravity = 190;
 	
 			//dust effect
-			dust_counter -= delta/timeScale;
+			dust_counter -= delta_time/timeScale;
 			if(dust_counter <= 0)
 			{
 				//makes sure that the y position of dust is clamped to the current bricks dimensions
@@ -48,7 +48,7 @@
 				{
 					instance_create(brickx.x - brickx.sprite_width/2,dust_pos_y_1,obj_dust);
 				}
-				dust_counter -=0.01;
+				dust_counter = 0.01;
 			}
 	
 		}
