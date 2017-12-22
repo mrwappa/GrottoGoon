@@ -1,6 +1,5 @@
 /// @description
-
-
+timer_counter = 0;
 
 //Appearance
 color = c_white;

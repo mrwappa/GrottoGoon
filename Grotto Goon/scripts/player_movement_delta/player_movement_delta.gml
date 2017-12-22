@@ -1,9 +1,10 @@
+randomize(); 
 var h_mov = k_right - k_left;
 
 //jump
 if(k_jump and grounded)
 {
-	jump_value = -450;
+	jump_value = -500;//500
 	sprite_index = spr_player_jump;
 }
 

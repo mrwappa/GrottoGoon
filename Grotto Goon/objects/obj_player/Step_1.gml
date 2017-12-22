@@ -12,3 +12,5 @@ else
 {
 	timeScale = 1;	
 }
+
+timer_counter += delta;
