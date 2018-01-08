@@ -15,7 +15,7 @@ if(current_state == argument0)
 		
 		if(mouse_check_button_pressed(mb_left))
 		{
-			current_state = argument1;	
+			current_state = argument1;
 		}
 	}
 }

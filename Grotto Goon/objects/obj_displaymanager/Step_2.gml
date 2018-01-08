@@ -5,12 +5,12 @@ if(instance_exists(FollowObject))
 	{
 		screenshake = lerp(screenshake,0,0.27);
 		view_x = FollowObject.x - (view_w/2) + choose(screenshake*choose(1,2),-screenshake*choose(1,2));
-		view_y = FollowObject.y - (view_h/2) + choose(screenshake*choose(1,2),-screenshake*choose(1,2));
+		view_y = FollowObject.y - (view_h/2) + choose(screenshake*choose(1,2),-screenshake*choose(1,2)) + view_y_look;
 	}
 	else
 	{
 		view_x = FollowObject.x - (view_w/2);
-		view_y = FollowObject.y - (view_h/2);
+		view_y = FollowObject.y - (view_h/2) + view_y_look;
 	}
 }
 else

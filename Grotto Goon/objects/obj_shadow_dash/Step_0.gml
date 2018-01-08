@@ -1,5 +1,5 @@
 /// @description
-image_alpha -= 0.08*delta;
+image_alpha -= 3*delta;
 
 if(image_alpha <= 0)
 {

@@ -32,5 +32,6 @@ current_state = spear_state.idle;
 
 state_idle = spear_state.idle;
 state_grabbed = spear_state.grabbed;
+state_inventory = spear_state.inventory;
 
 grabbable = false;

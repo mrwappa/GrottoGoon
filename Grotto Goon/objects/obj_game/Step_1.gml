@@ -7,6 +7,7 @@ release_k_jump = keyboard_check_released(vk_space);
 k_crouch = keyboard_check(ord("S"));
 k_dash = mouse_check_button_pressed(mb_right);
 k_attack = mouse_check_button_pressed(mb_left);
+k_up = keyboard_check(ord("W"));
 
 //delta = 60/1000000*delta_time;
 

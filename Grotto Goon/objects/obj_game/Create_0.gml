@@ -21,7 +21,7 @@ globalvar release_k_jump;
 globalvar k_crouch;
 globalvar k_dash;
 globalvar k_attack;
-
+globalvar k_up;
 
 globalvar delta;
 delta = 1;//1
