@@ -17,7 +17,6 @@ if(hold_k_jump)
 }
 else
 {
-
 	jump_value = damp(jump_value,0,1-0.995);
 }
 p_gravity += 380*delta;
@@ -80,7 +79,7 @@ if(k_crouch and grounded)
 }
 else
 {
-	movement_speed = 150;	
+	movement_speed = 150;
 }
 
 //move

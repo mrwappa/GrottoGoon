@@ -1,8 +1,10 @@
 /// @description
 //player_movement();
+previous_sprite = sprite_index;
 if(current_state == player_state.normal)
 {
 	player_movement_delta();
+	camera_look();
 }
 
 if(current_state == player_state.rolling)
@@ -12,7 +14,6 @@ if(current_state == player_state.rolling)
 
 player_animation();
 player_pickup_weapon();
-camera_look();
 if(keyboard_check(ord("V")))
 {
 	timeScale = 0.2;	

@@ -1,3 +1,4 @@
+
 if(img_speed > 0)
 {
 	img_counter += img_speed*delta;//img_speed/SlowMo
@@ -11,5 +12,10 @@ if(img_speed > 0)
 			img_index = 0; 
 		}	
 	}
+}
+current_sprite_index = sprite_index;
+if(previous_sprite != current_sprite_index)
+{
+	img_index = 0;
 }
 image_index = img_index; 

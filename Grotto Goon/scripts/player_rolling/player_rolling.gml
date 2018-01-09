@@ -1,5 +1,5 @@
 
-img_speed = 16;
+img_speed = 17;
 
 x_speed = roll_x_speed;
 if(entity_x_collision(x_speed*delta,obj_solid))
@@ -26,7 +26,7 @@ x += x_speed*delta;
 y += y_speed*delta;
 
 //exit to normal state
-if(img_index >= image_number)
+if(img_index == image_number)
 {
 	roll_x_speed = 0;
 	if(ds_list_find_index(Weapons,Weapon) != -1)
@@ -49,7 +49,7 @@ if(img_index >= image_number)
 }	
 
 //jump
-if(k_jump and grounded and img_index > 3)
+if(k_jump and grounded and img_index > 1)
 {
 	jump_value = -500;//500
 	sprite_index = spr_player_jump;
