@@ -32,6 +32,7 @@
 		{
 			if(k_right || k_left)
 			{
+				sprite_index = spr_player_jump;
 				jump_value = -150;
 				p_gravity = 190;
 	

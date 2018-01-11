@@ -131,9 +131,9 @@ if(roll_x_speed > 0 and h_mov == -1)
 //animation speed
 img_speed = abs(true_xspeed)/10;
 
-if(img_speed == 0)
+if(img_speed < 0.1)//img_speed == 0
 {
-	img_index = 0;	
+	img_index = 0;
 }
 if(!grounded)
 {
