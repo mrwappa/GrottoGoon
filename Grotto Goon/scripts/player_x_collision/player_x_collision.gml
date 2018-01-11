@@ -30,26 +30,30 @@
 		//wall slide
 		if(!grounded and y_speed > 0)
 		{
-			jump_value = -150;
-			p_gravity = 190;
-	
-			//dust effect
-			dust_counter -= delta;
-			if(dust_counter <= 0)
+			if(k_right || k_left)
 			{
-				//makes sure that the y position of dust is clamped to the current bricks dimensions
-				var dust_pos_y = clamp(y + irandom_range(-2,2),brickx.y - sprite_height/2,brickx.y + sprite_height/2);
-				var dust_pos_y_1 = clamp(y - irandom_range(-2,2),brickx.y - sprite_height/2,brickx.y + sprite_height/2);
-				if(k_left)
+				jump_value = -150;
+				p_gravity = 190;
+	
+				//dust effect
+				dust_counter -= delta;
+				if(dust_counter <= 0)
 				{
-					instance_create(brickx.x + brickx.sprite_width/2.2,dust_pos_y,obj_dust);	
+					//makes sure that the y position of dust is clamped to the current bricks dimensions
+					var dust_pos_y = clamp(y + irandom_range(-2,2),brickx.y - sprite_height/2,brickx.y + sprite_height/2);
+					var dust_pos_y_1 = clamp(y - irandom_range(-2,2),brickx.y - sprite_height/2,brickx.y + sprite_height/2);
+					if(k_left)
+					{
+						instance_create(brickx.x + brickx.sprite_width/2.2,dust_pos_y,obj_dust);	
+					}
+					if(k_right)
+					{
+						instance_create(brickx.x - brickx.sprite_width/1.8,dust_pos_y_1,obj_dust);
+					}
+					dust_counter = 0.01;
 				}
-				if(k_right)
-				{
-					instance_create(brickx.x - brickx.sprite_width/1.8,dust_pos_y_1,obj_dust);
-				}
-				dust_counter = 0.01;
 			}
+			
 	
 		}
 		return true;
