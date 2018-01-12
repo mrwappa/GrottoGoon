@@ -115,7 +115,7 @@ if(k_dash and h_mov != 0)
 	
 	sprite_index = spr_player_roll;
 	image_xscale = h_mov;
-	roll_x_speed = h_mov * 400;
+	roll_x_speed = h_mov * 450;
 	current_state = player_state.rolling;
 }
 roll_x_speed = damp(roll_x_speed,0,1-0.95);

@@ -1,9 +1,9 @@
 /// @description
-//player_movement();
 previous_sprite = sprite_index;
 if(current_state == player_state.normal)
 {
 	player_movement_delta();
+	player_pickup_weapon();
 	camera_look();
 }
 
@@ -11,12 +11,11 @@ if(current_state == player_state.rolling)
 {
 	player_rolling();
 }
-
 player_animation();
-player_pickup_weapon();
+
 if(keyboard_check(ord("V")))
 {
-	timeScale = 0.2;	
+	timeScale = 0.15;
 }
 else
 {

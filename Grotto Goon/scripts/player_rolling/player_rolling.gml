@@ -1,4 +1,4 @@
-img_speed = 19;
+img_speed = 25;
 
 x_speed = roll_x_speed;
 if(entity_x_collision(x_speed*delta,obj_solid))

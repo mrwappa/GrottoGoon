@@ -9,7 +9,7 @@
         "370f6ecf-2c49-4a0c-b05b-af9c5691d3df"
     ],
     "filterType": "GMScript",
-    "folderName": "Spear States",
+    "folderName": "Spear Vanilla States",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
