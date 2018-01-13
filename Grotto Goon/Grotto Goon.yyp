@@ -271,6 +271,14 @@
             }
         },
         {
+            "Key": "49a5d974-e5ae-420d-9849-f109462c1835",
+            "Value": {
+                "id": "cf3e7d8e-58a9-4b0b-a966-f1a4a91f3c70",
+                "resourcePath": "views\\49a5d974-e5ae-420d-9849-f109462c1835.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "4b032a6a-f828-4ff3-b6ab-188036bf3e47",
             "Value": {
                 "id": "1f2fd3cf-bebf-42fb-8360-da4817ea1b08",
@@ -367,6 +375,14 @@
             }
         },
         {
+            "Key": "6394630a-1cb6-40df-82dd-9c51252d6358",
+            "Value": {
+                "id": "8ff503c6-de96-4c75-a53c-2b3e26d11cb6",
+                "resourcePath": "scripts\\wand_state_shooting\\wand_state_shooting.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "65023464-f727-4b95-8fea-e619144efa9a",
             "Value": {
                 "id": "57549940-d2fe-4e03-be50-ebd0e3afae22",
@@ -388,6 +404,14 @@
                 "id": "12708416-4673-4e48-9e19-44cc6347a8b7",
                 "resourcePath": "objects\\obj_solid\\obj_solid.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6ac882cd-8387-4a16-a6c5-2d4f2bf8bf9a",
+            "Value": {
+                "id": "9bc582c4-3d0d-46a1-aec0-f7a5f270621a",
+                "resourcePath": "sprites\\spr_vanilla_projectile\\spr_vanilla_projectile.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -631,6 +655,14 @@
             }
         },
         {
+            "Key": "aa47d1ae-cbb1-43ef-be93-96700e0b15d5",
+            "Value": {
+                "id": "b631505e-411c-45f6-9e85-3dac7c105c14",
+                "resourcePath": "scripts\\hand_state_wand_grab\\hand_state_wand_grab.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "abd78a85-611d-44a8-9299-c872ede8d0d0",
             "Value": {
                 "id": "f33a8200-fa95-4b5b-9a97-280c23964c14",
@@ -700,6 +732,14 @@
                 "id": "73e8992b-87e4-4abb-ac48-0ca720fdfc29",
                 "resourcePath": "views\\b6c16d61-8697-4e13-8832-310b76970c59.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b73ab231-7860-4fee-9d75-2e59dbf8cba2",
+            "Value": {
+                "id": "ee9388b7-7737-46be-83f4-c0a45e32d9a2",
+                "resourcePath": "objects\\obj_linear_projectile\\obj_linear_projectile.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -799,6 +839,14 @@
             }
         },
         {
+            "Key": "da2361db-d009-4123-b8c2-16ce0dc81ed8",
+            "Value": {
+                "id": "9f017bda-6471-489f-ae3f-b33c9bbe415e",
+                "resourcePath": "views\\da2361db-d009-4123-b8c2-16ce0dc81ed8.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "da510f8a-2fc5-4de1-935b-d502aec4584a",
             "Value": {
                 "id": "6b72135e-770e-4705-8d28-a54c9930ced4",
@@ -812,6 +860,14 @@
                 "id": "fcb9ccc8-67cd-48cf-905e-509ce0069115",
                 "resourcePath": "sprites\\spr_stick\\spr_stick.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "dca7843c-40a3-4444-b268-f945dced3810",
+            "Value": {
+                "id": "4b3355ae-2ec3-4dc1-8e09-38bdd9fbf176",
+                "resourcePath": "objects\\obj_alarm\\obj_alarm.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -969,6 +1025,7 @@
         "89934c6c-ce2f-40cd-8cb4-517c1fc9733f",
         "509b7343-73ae-4dd7-bf34-e5047d6edc87",
         "7ce30468-bf2b-4254-bd27-2fabcae49dcb",
+        "aa47d1ae-cbb1-43ef-be93-96700e0b15d5",
         "7c23aaa3-5aa0-4d92-b13a-5d4f90a97adf",
         "a4b0b103-aa66-480c-be5f-c2e151a2522e",
         "b1f20597-5026-49ac-96fb-4506a3a20d45",
@@ -978,6 +1035,7 @@
         "7472983b-67de-49ab-9a49-2bd475a5839e",
         "4ee57261-f020-4d7a-85d9-9d1b91373bbe",
         "83385149-5182-4df6-9e6a-11d81961357d",
+        "6394630a-1cb6-40df-82dd-9c51252d6358",
         "b186a770-e569-4a2f-b5cd-36554284beda",
         "a173e697-194f-4b91-adee-e6a0548691f0"
     ],

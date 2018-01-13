@@ -28,9 +28,10 @@ y += y_speed*delta;
 if(img_index == image_number)
 {
 	roll_x_speed = 0;
-	if(ds_list_find_index(Weapons,Weapon) != -1)
+	var weapon = ds_list_find_value(Weapons,current_weapon);
+	if(weapon != noone and !is_undefined(weapon))
 	{
-		with(Weapon)
+		with(weapon)
 		{
 			current_state = state_grabbed;
 			visible = true;
@@ -52,9 +53,10 @@ if(k_jump and grounded and img_index > 1)
 {
 	jump_value = -500;//500
 	sprite_index = spr_player_jump;
-	if(ds_list_find_index(Weapons,Weapon) != -1)
+	var weapon = ds_list_find_value(Weapons,current_weapon);
+	if(weapon != noone and !is_undefined(weapon))
 	{
-		with(Weapon)
+		with(weapon)
 		{
 			current_state = state_grabbed;
 			visible = true;

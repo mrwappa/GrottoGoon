@@ -40,7 +40,7 @@ if(instance_exists(obj_weapon))
 			grabbable = true;
 		}
 		
-		
+		//PICKUP WEAPON
 		if(keyboard_check_pressed(vk_shift) and Weapon.grabbable == true)
 		{
 			if(ds_list_size(Weapons > 0))
@@ -79,6 +79,7 @@ if(instance_exists(obj_weapon))
 						current_state = state_inventory;
 					}
 				}
+				//Weapon = value;
 				player_equip_added_weapon();
 			}
 			

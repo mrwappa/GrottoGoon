@@ -8,7 +8,7 @@ if(current_state == argument0)
 	}
 	else
 	{
-		 color = mergecolor;
+		color = mergecolor;
 	}
 	
 	falling_speed += 200*delta;
@@ -19,7 +19,6 @@ if(current_state == argument0)
 		{
 			if(place_meeting(x,y+sign(falling_speed*delta),block)) then break;
 				y+=sign(falling_speed)*delta;
-			
 		}
 
 		falling_speed = 0;

@@ -13,7 +13,7 @@ if(current_state == argument0)
 		y = target.y + 4 + extra_length_y - round(target.image_index / 2);
 		image_yscale = sign(target.image_xscale);
 		
-		if(mouse_check_button_pressed(mb_left))
+		if(k_attack)
 		{
 			current_state = argument1;
 		}

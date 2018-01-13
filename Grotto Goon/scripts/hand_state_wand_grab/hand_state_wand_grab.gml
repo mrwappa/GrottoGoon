@@ -1,4 +1,4 @@
-if(current_state == hand_state.grabbing_spear)
+if(current_state == hand_state.grabbing_wand)
 {
 	if(instance_exists(target))
 	{

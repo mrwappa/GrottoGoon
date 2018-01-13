@@ -9,7 +9,8 @@ enum hand_state
 	idle,
 	grabbing_spear,
 	grabbing_flail,
-	grabbing_chain
+	grabbing_chain,
+	grabbing_wand
 }
 
 current_state = hand_state.idle;

@@ -100,7 +100,20 @@ else
 //roll
 if(k_dash and h_mov != 0)
 {
-	if(ds_list_find_index(Weapons,Weapon) != -1)
+	var weapon = ds_list_find_value(Weapons,current_weapon);
+	if(weapon != noone and !is_undefined(weapon))
+	{
+		with(weapon)
+		{
+			current_state = state_inventory;			
+		}
+		previous_hand_state = hands.current_state;
+		with(hands)
+		{
+			current_state = state_idle;	
+		}
+	}
+	/*if(ds_list_find_index(Weapons,Weapon) != -1)
 	{
 		with(Weapon)
 		{
@@ -111,7 +124,7 @@ if(k_dash and h_mov != 0)
 		{
 			current_state = state_idle;	
 		}
-	}
+	}*/
 	
 	sprite_index = spr_player_roll;
 	image_xscale = h_mov;
