@@ -79,7 +79,7 @@ if(k_crouch and grounded)
 }
 else
 {
-	movement_speed = 150;
+	movement_speed = 160;
 }
 
 //move

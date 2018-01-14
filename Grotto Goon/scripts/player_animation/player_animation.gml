@@ -6,7 +6,7 @@ if(img_speed > 0)
 	if(img_counter >= 1)
 	{
 		img_index++;
-		img_counter = 0;
+		img_counter -= 1;
 		if(img_index > image_number)
 		{
 			img_index = 0; 
