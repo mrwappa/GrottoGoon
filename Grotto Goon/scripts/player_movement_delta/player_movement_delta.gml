@@ -113,22 +113,9 @@ if(k_dash and h_mov != 0)
 			current_state = state_idle;	
 		}
 	}
-	/*if(ds_list_find_index(Weapons,Weapon) != -1)
-	{
-		with(Weapon)
-		{
-			current_state = state_inventory;			
-		}
-		previous_hand_state = hands.current_state;
-		with(hands)
-		{
-			current_state = state_idle;	
-		}
-	}*/
-	
 	sprite_index = spr_player_roll;
 	image_xscale = h_mov;
-	roll_x_speed = h_mov * 450;
+	roll_x_speed = h_mov * 380;
 	current_state = player_state.rolling;
 }
 roll_x_speed = damp(roll_x_speed,0,1-0.95);
@@ -155,6 +142,6 @@ if(!grounded)
 }
 
 //coordinate maths
-true_xspeed = (x -xprevious)/delta;
-true_yspeed = (y -yprevious)/delta;
+true_xspeed = (x - xprevious)/delta;
+true_yspeed = (y - yprevious)/delta;
 

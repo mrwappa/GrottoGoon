@@ -14,3 +14,4 @@ if(entity_y_collision(y_speed*delta,obj_solid))
 
 x += x_speed*delta;
 y += y_speed*delta;
+

@@ -1,4 +1,4 @@
-img_speed = 25;
+img_speed = 20;
 
 x_speed = roll_x_speed;
 if(entity_x_collision(x_speed*delta,obj_solid))
@@ -68,3 +68,7 @@ if(k_jump and grounded and img_index > 1)
 	}
 	current_state = player_state.normal;
 }
+
+//coordinate maths
+true_xspeed = (x -xprevious)/delta;
+true_yspeed = (y -yprevious)/delta;

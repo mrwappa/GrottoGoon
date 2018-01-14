@@ -5,7 +5,7 @@ y+=lengthdir_y(_speed*delta,_dir);
 
 if(instance_place(x,y,obj_solid) and !collision)
 {
-	alarm_1.timer = 0.01;
+	alarm_1.timer = 0.005;
 	collision = true;
 }
 if(x - sprite_width > room_width or x + sprite_width < 0)
