@@ -1,4 +1,5 @@
-
+/// @description Insert description here
+// You can write your code in this editor
 if(img_speed > 0)
 {
 	img_counter += img_speed*delta;//img_speed/SlowMo

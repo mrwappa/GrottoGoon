@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description
 x_speed = movement_speed;
 y_speed = e_gravity;
 
@@ -15,3 +14,4 @@ if(entity_y_collision(y_speed*delta,obj_solid))
 x += x_speed*delta;
 y += y_speed*delta;
 
+event_inherited();
