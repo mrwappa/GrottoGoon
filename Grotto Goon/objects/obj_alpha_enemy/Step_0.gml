@@ -1,17 +1,6 @@
 /// @description
-x_speed = movement_speed;
-y_speed = e_gravity;
+alpha_ememy_patroll(alpha_enemy.patroll);
+alpha_ememy_chase(alpha_enemy.chase);
+alpha_ememy_jump(alpha_enemy.jump);
 
-if(entity_x_collision(x_speed*delta,obj_solid))
-{
-	x_speed = 0;
-}
-if(entity_y_collision(y_speed*delta,obj_solid))
-{
-	y_speed = 0;
-}
-
-x += x_speed*delta;
-y += y_speed*delta;
-
-event_inherited();
+image_xscale = one_sign(x_speed) * -1;

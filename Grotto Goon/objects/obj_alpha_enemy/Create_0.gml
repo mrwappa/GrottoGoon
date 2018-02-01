@@ -9,8 +9,17 @@ depth = 2;
 x_speed = 0;
 y_speed = 0;
 
-movement_speed = -100;
-
+movement_speed = 100;
 e_gravity = 250;
 
 img_speed = 12;
+target = obj_player;
+
+enum alpha_enemy
+{
+	patroll,
+	chase,
+	jump
+}
+
+current_state = alpha_enemy.patroll;

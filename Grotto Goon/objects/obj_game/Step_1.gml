@@ -1,4 +1,5 @@
 /// @description 
+//Main Keys
 k_left = keyboard_check(ord("A"));
 k_right= keyboard_check(ord("D"));
 k_jump  = keyboard_check_pressed(vk_space);
