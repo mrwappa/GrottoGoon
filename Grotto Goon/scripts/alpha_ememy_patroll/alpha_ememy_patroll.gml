@@ -27,7 +27,7 @@ if(current_state = argument0)
 		var dist = point_distance(x,y,target.x,target.y);
 		if(!line_col and dist < 120)
 		{
-			movement_speed = 80;
+			movement_speed = 95;
 			current_state = state_chase;
 		}
 	}

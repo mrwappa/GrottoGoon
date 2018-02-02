@@ -9,7 +9,7 @@ color = c_white;
 x_speed = 0;
 y_speed = 0;
 
-movement_speed = 50;
+movement_speed = 40;
 e_gravity = 250;
 jump_value = 0;
 

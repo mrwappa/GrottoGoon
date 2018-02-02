@@ -3,7 +3,7 @@ if(current_state = argument0)
 	x_speed = movement_speed * image_xscale*(-1);
 	y_speed = e_gravity - jump_value;
 	
-	jump_value = damp(jump_value,0,1-0.95);
+	jump_value = damp(jump_value,0,1-0.98);
 	
 	if(entity_x_collision(x_speed*delta,obj_solid))
 	{
