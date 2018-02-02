@@ -29,7 +29,12 @@ if(current_state = argument0)
 		if(!block)
 		{
 			var delta_y = abs(target.y - y);
-			if(target.y > y and delta_y < target.sprite_height)
+			if(!target.grounded and target.y < y - target.sprite_height*1.5)
+			{
+				jump_value = 550;
+				current_state = state_jump;	
+			}
+			if(target.y >= y and delta_y < target.sprite_height and target.grounded)
 			{
 				jump_value = 550;
 				current_state = state_jump;
