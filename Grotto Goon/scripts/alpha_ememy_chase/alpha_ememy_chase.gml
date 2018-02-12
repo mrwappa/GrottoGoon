@@ -1,17 +1,9 @@
 if(current_state = argument0)
 {
-	var dir = point_direction(x,y,target.x,target.y);
-	if(dir > 90 and dir < 270)
-	{
-		image_xscale = 1;
-	}
-	else
-	{
-		image_xscale = -1;
-	}
+	image_xscale = target.x < x ? 1 : -1;
 	
-	x_speed = movement_speed * image_xscale*(-1);
-	y_speed = e_gravity;
+	x_speed = movement_speed * image_xscale*(-1) + knockback_x;
+	y_speed = e_gravity + knockback_y;
 	if(entity_x_collision(x_speed*delta,obj_solid))
 	{
 		x_speed = 0;
@@ -29,7 +21,7 @@ if(current_state = argument0)
 			jump_value = 600;
 			current_state = state_jump;
 		}
-		var block = collision_point(x + (sprite_width/2) * -1 ,y + sprite_height/2 + 8,obj_solid,false,true);
+		var block = collision_point(x + (sprite_width) * -1 ,y + sprite_height/2 + 8,obj_solid,false,true);
 		if(!block)
 		{
 			var delta_y = abs(target.y - y);

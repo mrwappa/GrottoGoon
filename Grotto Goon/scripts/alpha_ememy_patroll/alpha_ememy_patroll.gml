@@ -1,7 +1,7 @@
 if(current_state = argument0)
 {
-	x_speed = movement_speed;
-	y_speed = e_gravity;
+	x_speed = movement_speed + knockback_x;
+	y_speed = e_gravity + knockback_y;
 	turn_timer -= 1*delta;
 	if(entity_x_collision(x_speed*delta,obj_solid))
 	{

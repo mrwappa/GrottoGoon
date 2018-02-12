@@ -9,3 +9,6 @@ color = c_white;
 alarm_1 = instance_create(0,0,obj_alarm);
 
 collision = false;
+
+knockback = 180;
+dmg = 0;

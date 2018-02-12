@@ -591,6 +591,14 @@
             }
         },
         {
+            "Key": "91c18b0b-9eee-479a-8375-1f0df5d67f5b",
+            "Value": {
+                "id": "4c05640a-2f7f-4bfe-892e-aab8d9a51e20",
+                "resourcePath": "objects\\obj_projectile\\obj_projectile.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "95508d58-3e17-4832-b4c8-3d7db35bbbf1",
             "Value": {
                 "id": "9d6e6f40-728c-4fd2-9300-c4261d6c6f19",
@@ -819,6 +827,14 @@
             "Value": {
                 "id": "ac29871b-2452-46b1-8736-658239683b9a",
                 "resourcePath": "objects\\obj_weapon\\obj_weapon.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "c6f80198-4a4e-49b6-a0d1-9c9010c0c3c5",
+            "Value": {
+                "id": "118eddab-37f3-4d1b-95c9-aaac3f3282b3",
+                "resourcePath": "objects\\obj_dmg_source\\obj_dmg_source.yy",
                 "resourceType": "GMObject"
             }
         },

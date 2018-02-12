@@ -12,6 +12,8 @@ y_speed = 0;
 movement_speed = 40;
 e_gravity = 250;
 jump_value = 0;
+knockback_x = 0;
+knockback_y = 0;
 
 turn_timer = 0;
 
@@ -30,4 +32,5 @@ state_jump = alpha_enemy_state.jump;
 
 current_state = state_patroll;
 
-
+//Combat
+projectile = noone;
